@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language: en
+title: 【DayDay】卡比兽之巢
+subtitle: 鲤鱼王型前端程序员成长历程
+description: 记录开发中遇到的问题，主要是给自己看到，目前专注前端方面内容，哈哈哈。
+keywords: 前端
+author: DayDay
+language: zh-cn
 timezone:
 
 # URL
