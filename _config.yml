@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://trcat.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +73,26 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: archer
+
+jsonContent:
+  meta: true
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: true
+    excerpt: false
+    categories: true
+    tags: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,3 +100,11 @@ deploy:
   type: git
   repository: https://github.com/trcat/trcat.github.io
   branch: master
+
+# Algolia
+## 实现站内搜索
+algolia:
+  applicationID: 'SNN2XGS9M0'
+  apiKey: '81dd16ef5a770331d585b632e64f497b'
+  indexName: 'DayDay‘s Studio'
+  chunkSize: 5000
