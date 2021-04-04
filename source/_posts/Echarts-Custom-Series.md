@@ -31,9 +31,9 @@ tags:
 
 ```javascript
 renderItem(params, api) {
-	var coord = api.coord([0, 1]);
-    console.log(coord[0]) // x 轴上第一个刻度的坐标点的横坐标值
-    console.log(coord[1]) // y 轴为第二个刻度的坐标点的纵坐标值
+  var coord = api.coord([0, 1]);
+  console.log(coord[0]) // x 轴上第一个刻度的坐标点的横坐标值
+  console.log(coord[1]) // y 轴为第二个刻度的坐标点的纵坐标值
 }
 ```
 
@@ -44,3 +44,8 @@ renderItem(params, api) {
 - 把 `0` 作为参数传入 `api.coord` 和 `api.size` ，会返回 x 轴或 y 轴第一个刻度的数据信息，并不是原点。
 - 把非整数作为参数传入 `api.coord` 和 `api.size` ，参数会先进行取整，再进行换算，例如，`0` 和 `0.5` 得到的结果是一样的。
 - `api.value` 的参数不能超过 `3`，无论当前 data 的 value 数组的长度是否超过 `3` 。
+
+## 案例
+
+这边自己写了一个 [demo](https://trcat.github.io/echart/)，生成如下图表，看过源码之后会对上述内容有更好的理解：
+![demo](demo.png)
