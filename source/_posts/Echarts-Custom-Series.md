@@ -47,5 +47,5 @@ renderItem(params, api) {
 
 ## 案例
 
-这边自己写了一个 [demo](https://trcat.github.io/echart/)，生成如下图表，看过源码之后会对上述内容有更好的理解：
+这边自己写了一个 [demo](https://trcat.github.io/echart/)，生成如下图表，看过[源码](https://github.com/trcat/echart)之后会对上述内容有更好的理解：
 ![demo](demo.png)
