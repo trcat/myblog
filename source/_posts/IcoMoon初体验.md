@@ -17,7 +17,7 @@ tags:
 
 这是一个可以将 SVG 格式的文件转换为 web font （即使用字体显示图标）的神奇网站工具，工具的使用非常简单，基本操作如下图所示：
 
-![icomoon_useage](../icoMoon初体验/icomoon_useage.png)
+![icomoon_useage](icomoon_useage.png)
 
 
 
