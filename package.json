@@ -5,6 +5,7 @@
   "scripts": {
     "server": "hexo server",
     "build": "hexo generate",
+    "deploy": "hexo deploy",
     "algolia": "export HEXO_ALGOLIA_INDEXING_KEY=056d3299cf6860414709034894765844 && hexo algolia"
   },
   "hexo": {
