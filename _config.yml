@@ -104,7 +104,7 @@ deploy:
 # Algolia
 ## 实现站内搜索
 algolia:
-  applicationID: 'JXA686PJC5'
-  apiKey: '1687a4aa4cd9957764793845f062522d'
-  indexName: 'DayDayBlog'
+  applicationID: 'RIWMKR47AL'
+  apiKey: 'cdea79e554c01388c56ab76b823e2d1a'
+  indexName: 'my_first_index'
   chunkSize: 5000

@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate"
+    "server": "hexo server",
+    "build": "hexo generate",
+    "algolia": "export HEXO_ALGOLIA_INDEXING_KEY=056d3299cf6860414709034894765844 && hexo algolia"
   },
   "hexo": {
-    "version": "3.9.0"
+    "version": "5.4.0"
   },
   "dependencies": {
     "hexo": "^5.4.0",
