@@ -31,9 +31,9 @@ tags:
 
 ```javascript
 renderItem(params, api) {
-  var coord = api.coord([0, 1]);
-  console.log(coord[0]) // x 轴上第一个刻度的坐标点的横坐标值
-  console.log(coord[1]) // y 轴为第二个刻度的坐标点的纵坐标值
+	var coord = api.coord([0, 1]);
+    console.log(coord[0]) // x 轴上第一个刻度的坐标点的横坐标值
+    console.log(coord[1]) // y 轴为第二个刻度的坐标点的纵坐标值
 }
 ```
 
@@ -44,6 +44,38 @@ renderItem(params, api) {
 - 把 `0` 作为参数传入 `api.coord` 和 `api.size` ，会返回 x 轴或 y 轴第一个刻度的数据信息，并不是原点。
 - 把非整数作为参数传入 `api.coord` 和 `api.size` ，参数会先进行取整，再进行换算，例如，`0` 和 `0.5` 得到的结果是一样的。
 - `api.value` 的参数不能超过 `3`，无论当前 data 的 value 数组的长度是否超过 `3` 。
+
+## series
+
+Custom Series 大致设定与其他 Series 类似，但需特别注意 [`encode`](https://echarts.apache.org/zh/option.html#series-custom.encode) 的设定，这个设定非常重要，忽略这个设定可能会导致绘制的图片超出坐标系范围，造成图像的缺失。
+
+`encode` 在 [教程](https://echarts.apache.org/zh/tutorial.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B3%BB%E5%88%97) 中也有说明，实例代码如下：
+
+```javascript
+option = {
+    series: [{
+        type: 'custom',
+        renderItem: function () {
+            ...
+        },
+        encode: {
+            // data 中『维度1』和『维度2』对应到 X 轴
+            x: [1, 2],
+            // data 中『维度0』对应到 Y 轴
+            y: 0
+        },
+        data: [
+            // 维度0  维度1  维度2  维度3
+            [   12,   44,   55,   60   ], // 这是第一个 dataItem
+            [   53,   31,   21,   56   ], // 这是第二个 dataItem
+            [   71,   33,   10,   20   ], // 这是第三个 dataItem
+            ...
+        ]
+    }]
+};
+```
+
+
 
 ## 案例
 

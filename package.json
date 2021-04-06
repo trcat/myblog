@@ -6,7 +6,8 @@
     "server": "hexo server",
     "build": "hexo generate",
     "deploy": "hexo deploy",
-    "algolia": "export HEXO_ALGOLIA_INDEXING_KEY=056d3299cf6860414709034894765844 && hexo algolia"
+    "algolia": "export HEXO_ALGOLIA_INDEXING_KEY=056d3299cf6860414709034894765844 && hexo algolia",
+    "theme": "npm i hexo-generator-json-content --save && npm i --save hexo-wordcount && git clone https://github.com/fi3ework/hexo-theme-archer.git themes/archer --depth=1"
   },
   "hexo": {
     "version": "5.4.0"
